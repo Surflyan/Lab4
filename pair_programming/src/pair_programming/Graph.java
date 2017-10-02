@@ -111,7 +111,7 @@ public class Graph {
 		ans= m.replaceAll(" ");
 		return ans;
 	}
-	public String[] calcShortestPath(String word1, String word2){//最短路径
+	public String[] calcShortestPath(String word1, String word2){//最短路径  返回的字符串数组维数等于路径数，字符串代表路径
 		boolean judge1 = true,judge2 = true;
 		if(word1.equals("")||word1==null) judge1=false;
 		if(word2.equals("")||word2==null) judge2=false;
@@ -194,7 +194,7 @@ public class Graph {
 		if (ans.length==0) return new String[]{"REACH_ERROR"};
 		return ans;
 	}
-	private void findpath(int start,int temp,point_set[] path,point_set[] path2){
+	private void findpath(int start,int temp,point_set[] path,point_set[] path2){//用递归寻找路径
 		if (path2[temp].path.size()!=0) return;
 		if (temp==start) path2[temp].path.add(""+temp);
 		else{
@@ -206,7 +206,7 @@ public class Graph {
 			}
 		}
 	}
-	class point_set{
+	class point_set{                                      //封装一个stringlist
 		public ArrayList<String> path;
 		public point_set(){
 			path=new ArrayList<String>();
