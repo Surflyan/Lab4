@@ -33,30 +33,6 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 
 /**
-* <dl>
-* <dt>Purpose: GraphViz Java API
-* <dd>
-*
-* <dt>Description:
-* <dd> With this Java class you can simply call dot
-*      from your Java programs
-* <dt>Example usage:
-* <dd>
-* <pre>
-*    GraphViz gv = new GraphViz();
-*    gv.addln(gv.start_graph());
-*    gv.addln("A -> B;");
-*    gv.addln("A -> C;");
-*    gv.addln(gv.end_graph());
-*    System.out.println(gv.getDotSource());
-*
-*    String type = "gif";
-*    File out = new File("out." + type);   // out.gif in this example
-*    gv.writeGraphToFile( gv.getGraph( gv.getDotSource(), type ), out );
-* </pre>
-* </dd>
-*
-* </dl>
 *
 * @version v0.4, 2011/02/05 (February) -- Patch of Keheliya Gallaba is added. Now you
 * can specify the type of the output file: gif, dot, fig, pdf, ps, svg, png, etc.
