@@ -18,7 +18,6 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 
-
 public class MyJFrame extends JFrame {
 	private Graph G;
 	private JFrame frame;
@@ -302,7 +301,6 @@ public class MyJFrame extends JFrame {
 		Graph ans = new Graph(filename);
 		return ans;
 	}
-
 
 	private String querybRIDGEwORDS(Graph G, String word1, String word2) {
 		return G.queryBridgeWords(word1, word2);
